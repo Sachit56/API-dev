@@ -132,19 +132,19 @@ The `Api Dev.postman_collection.json` file contains a Postman collection for tes
 
 ## Project Structure
 ```
-project/
+API-dev/
 ├── manage.py
 ├── requirements.txt
 ├── .env
 ├── Api Dev.postman_collection.json
-├── <app_name>/
+├── userapp/
 │   ├── migrations/
 │   ├── models.py
 │   ├── views.py
 │   ├── urls.py
 │   ├── serializers.py
 │   └── ...
-├── <project_name>/
+├── User/
 │   ├── settings.py
 │   ├── urls.py
 │   └── ...
