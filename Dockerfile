@@ -9,10 +9,10 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 
 COPY . .
 
-COPY wait.sh /app/wait.sh
+COPY wait-for-it.sh /wait-for-it.sh
+RUN chmod +x /wait-for-it.sh
 
-RUN chmod +x /app/wait.sh
 
 EXPOSE 8000
 
-CMD ["./wait.sh"]
+CMD ["python manage.py runserver 0.0.0.0:8000"]
