@@ -1,0 +1,610 @@
+openapi: 3.0.3
+info:
+  title: KPA API
+  version: 1.0.0
+  description: Assignment of django
+paths:
+  /api/forms/bogie-checksheet/:
+    get:
+      operationId: bogie_checksheet_list
+      tags:
+      - bogie-checksheet
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BogieForm'
+          description: ''
+    post:
+      operationId: bogie_checksheet_create
+      tags:
+      - bogie-checksheet
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BogieForm'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/BogieForm'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/BogieForm'
+        required: true
+      security:
+      - jwtAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BogieForm'
+          description: ''
+  /api/forms/bogie-checksheet/{id}/:
+    get:
+      operationId: bogie_checksheet_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this bogie form.
+        required: true
+      tags:
+      - bogie-checksheet
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BogieForm'
+          description: ''
+    put:
+      operationId: bogie_checksheet_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this bogie form.
+        required: true
+      tags:
+      - bogie-checksheet
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BogieForm'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/BogieForm'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/BogieForm'
+        required: true
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BogieForm'
+          description: ''
+    patch:
+      operationId: bogie_checksheet_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this bogie form.
+        required: true
+      tags:
+      - bogie-checksheet
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedBogieForm'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedBogieForm'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedBogieForm'
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BogieForm'
+          description: ''
+    delete:
+      operationId: bogie_checksheet_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this bogie form.
+        required: true
+      tags:
+      - bogie-checksheet
+      security:
+      - jwtAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/forms/login/:
+    post:
+      operationId: login_create
+      tags:
+      - login
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/forms/profile/:
+    get:
+      operationId: profile_retrieve
+      tags:
+      - profile
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          description: No response body
+  /api/forms/register/:
+    post:
+      operationId: register_create
+      tags:
+      - register
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Register'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Register'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Register'
+        required: true
+      security:
+      - jwtAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Register'
+          description: ''
+  /api/forms/users/:
+    get:
+      operationId: users_retrieve
+      tags:
+      - users
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          description: No response body
+  /api/forms/wheel-specifications/:
+    get:
+      operationId: wheel_specifications_list
+      tags:
+      - wheel-specifications
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/WheelSpecificationForm'
+          description: ''
+    post:
+      operationId: wheel_specifications_create
+      tags:
+      - wheel-specifications
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WheelSpecificationForm'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/WheelSpecificationForm'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/WheelSpecificationForm'
+        required: true
+      security:
+      - jwtAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WheelSpecificationForm'
+          description: ''
+  /api/forms/wheel-specifications/{id}/:
+    get:
+      operationId: wheel_specifications_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this wheel specification form.
+        required: true
+      tags:
+      - wheel-specifications
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WheelSpecificationForm'
+          description: ''
+    put:
+      operationId: wheel_specifications_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this wheel specification form.
+        required: true
+      tags:
+      - wheel-specifications
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WheelSpecificationForm'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/WheelSpecificationForm'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/WheelSpecificationForm'
+        required: true
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WheelSpecificationForm'
+          description: ''
+    patch:
+      operationId: wheel_specifications_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this wheel specification form.
+        required: true
+      tags:
+      - wheel-specifications
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedWheelSpecificationForm'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedWheelSpecificationForm'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedWheelSpecificationForm'
+      security:
+      - jwtAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WheelSpecificationForm'
+          description: ''
+    delete:
+      operationId: wheel_specifications_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this wheel specification form.
+        required: true
+      tags:
+      - wheel-specifications
+      security:
+      - jwtAuth: []
+      responses:
+        '204':
+          description: No response body
+components:
+  schemas:
+    BmbcCheckSheet:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        cylinderBody:
+          type: string
+          maxLength: 100
+        pistonTrunnion:
+          type: string
+          maxLength: 100
+        adjustingTube:
+          type: string
+          maxLength: 100
+        plungerSpring:
+          type: string
+          maxLength: 100
+      required:
+      - adjustingTube
+      - cylinderBody
+      - id
+      - pistonTrunnion
+      - plungerSpring
+    BogieCheckSheet:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        bogieFrameCondition:
+          type: string
+          maxLength: 100
+        bolster:
+          type: string
+          maxLength: 100
+        bolsterSuspensionBracket:
+          type: string
+          maxLength: 100
+        lowerSpringSeat:
+          type: string
+          maxLength: 100
+        axleGuide:
+          type: string
+          maxLength: 100
+      required:
+      - axleGuide
+      - bogieFrameCondition
+      - bolster
+      - bolsterSuspensionBracket
+      - id
+      - lowerSpringSeat
+    BogieDetails:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        bogieNo:
+          type: string
+          maxLength: 100
+        makerYearBuilt:
+          type: string
+          maxLength: 100
+        incomingDivAndDate:
+          type: string
+          maxLength: 100
+        deficitComponents:
+          type: string
+          maxLength: 100
+        dateOfIOH:
+          type: string
+          format: date
+      required:
+      - bogieNo
+      - dateOfIOH
+      - id
+      - incomingDivAndDate
+      - makerYearBuilt
+    BogieForm:
+      type: object
+      properties:
+        formNumber:
+          type: string
+          maxLength: 100
+        inspectionBy:
+          type: string
+          maxLength: 100
+        inspectionDate:
+          type: string
+          format: date
+        bogieDetails:
+          $ref: '#/components/schemas/BogieDetails'
+        bogieChecksheet:
+          $ref: '#/components/schemas/BogieCheckSheet'
+        bmbcChecksheet:
+          $ref: '#/components/schemas/BmbcCheckSheet'
+      required:
+      - bmbcChecksheet
+      - bogieChecksheet
+      - bogieDetails
+      - formNumber
+      - inspectionBy
+      - inspectionDate
+    PatchedBogieForm:
+      type: object
+      properties:
+        formNumber:
+          type: string
+          maxLength: 100
+        inspectionBy:
+          type: string
+          maxLength: 100
+        inspectionDate:
+          type: string
+          format: date
+        bogieDetails:
+          $ref: '#/components/schemas/BogieDetails'
+        bogieChecksheet:
+          $ref: '#/components/schemas/BogieCheckSheet'
+        bmbcChecksheet:
+          $ref: '#/components/schemas/BmbcCheckSheet'
+    PatchedWheelSpecificationForm:
+      type: object
+      properties:
+        formNumber:
+          type: string
+          maxLength: 100
+        submittedBy:
+          type: string
+          maxLength: 100
+        submittedDate:
+          type: string
+          format: date
+        fields:
+          $ref: '#/components/schemas/WheelSpecification'
+    Register:
+      type: object
+      properties:
+        email:
+          type: string
+          format: email
+          maxLength: 254
+        first_name:
+          type: string
+          maxLength: 20
+        last_name:
+          type: string
+          maxLength: 20
+        faculty:
+          type: string
+          maxLength: 50
+        age:
+          type: integer
+          maximum: 2147483647
+          minimum: 0
+        password:
+          type: string
+          writeOnly: true
+        file:
+          type: string
+          format: uri
+          nullable: true
+      required:
+      - age
+      - email
+      - faculty
+      - first_name
+      - last_name
+      - password
+    WheelSpecification:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        treadDiameterNew:
+          type: string
+          maxLength: 100
+        lastShopIssueSize:
+          type: string
+          maxLength: 100
+        condemningDia:
+          type: string
+          maxLength: 100
+        wheelGauge:
+          type: string
+          maxLength: 100
+        variationSameAxle:
+          type: string
+          maxLength: 100
+        variationSameBogie:
+          type: string
+          maxLength: 100
+        variationSameCoach:
+          type: string
+          maxLength: 100
+        wheelProfile:
+          type: string
+          maxLength: 100
+        intermediateWWP:
+          type: string
+          maxLength: 100
+        bearingSeatDiameter:
+          type: string
+          maxLength: 100
+        rollerBearingOuterDia:
+          type: string
+          maxLength: 100
+        rollerBearingBoreDia:
+          type: string
+          maxLength: 100
+        rollerBearingWidth:
+          type: string
+          maxLength: 100
+        axleBoxHousingBoreDia:
+          type: string
+          maxLength: 100
+        wheelDiscWidth:
+          type: string
+          maxLength: 100
+      required:
+      - axleBoxHousingBoreDia
+      - bearingSeatDiameter
+      - condemningDia
+      - id
+      - intermediateWWP
+      - lastShopIssueSize
+      - rollerBearingBoreDia
+      - rollerBearingOuterDia
+      - rollerBearingWidth
+      - treadDiameterNew
+      - variationSameAxle
+      - variationSameBogie
+      - variationSameCoach
+      - wheelDiscWidth
+      - wheelGauge
+      - wheelProfile
+    WheelSpecificationForm:
+      type: object
+      properties:
+        formNumber:
+          type: string
+          maxLength: 100
+        submittedBy:
+          type: string
+          maxLength: 100
+        submittedDate:
+          type: string
+          format: date
+        fields:
+          $ref: '#/components/schemas/WheelSpecification'
+      required:
+      - fields
+      - formNumber
+      - submittedBy
+      - submittedDate
+  securitySchemes:
+    jwtAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

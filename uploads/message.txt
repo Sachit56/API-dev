@@ -1,0 +1,126 @@
+\documentclass[letterpaper,11pt]{article}
+
+% Adjust margins for a single-page resume
+\usepackage[margin=0.75in]{geometry}
+
+% Other necessary packages
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{url} % For managing URL breaks
+
+% Sections formatting
+\usepackage{titlesec}
+
+% Adjustments to sections formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+% Custom commands
+\usepackage{enumitem}
+
+% Adjust itemize spacing
+\setlist[itemize]{leftmargin=*}
+
+% Hyperlink properties
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,    % Color of internal links (sections, pages, etc.)
+  urlcolor=blue,     % Color of URL links
+}
+
+% Empty header/footer
+\pagestyle{empty}
+
+% Begin document
+\begin{document}
+
+%----------HEADING-----------------
+\begin{center}
+  \textbf{\Huge Sibendra Timalsina} \\
+  \vspace{6pt} % Adjust spacing
+  \begin{tabular}{p{0.5\textwidth}p{0.5\textwidth}}
+    \textbf{Email:} \href{mailto:timaslinasibindra@gmail.com}{timaslinasibindra@gmail.com} & \textbf{Mobile:} +977-9862903122 \\
+    \textbf{GitHub:} \href{https://github.com/Sibindra/}{Sibindra} & \textbf{LinkedIn:} \href{https://www.linkedin.com/in/sibendra-timalsina-b7165b262/}{Sibendra Timalsina}
+  \end{tabular}
+\end{center}
+
+%-----------PROFESSIONAL COMPETENCIES-----------------
+\section*{Professional Competencies}
+\begin{itemize}
+  \item Strong expertise in \textbf{JavaScript/TypeScript, Golang, and Java}, adaptable across frameworks and tech stacks, delivering high-impact solutions for diverse challenges.  
+  \item Proficient in \textbf{DevOps, Cloud Technologies}, and optimizing systems to scale efficiently and securely using tools like \textbf{AWS, Docker, Kubernetes}.  
+  \item Proven ability to quickly master new frameworks, languages, and tools, fostering continuous growth and delivering maintainable, scalable solutions.  
+  \item Collaborative and team-oriented, with a focus on knowledge-sharing, continuous learning, and ensuring collective success across projects.  
+  \item Strong problem-solving mindset with a focus on designing clean, scalable, and maintainable architectures across varied technical environments.  
+\end{itemize}
+
+%-----------EXPERIENCE-----------------
+\section*{Experience}
+
+\subsection*{Software Engineer} \hfill \textit{Dec 2024 - Present}  
+\textbf{Treeleaf AI,} Shankamul-11, Kathmandu, Nepal
+\begin{itemize}
+  \item Contributed to the development of \textbf{anydone.com}, optimizing real-time system capabilities to improve user experience.  
+  \item Collaborated cross-functionally to integrate AI-driven features, enhancing system scalability and efficiency.  
+  \item Designed and implemented robust, real-time system architectures, following industry best practices.
+\end{itemize}
+
+\subsection*{Freelance Developer} \hfill \textit{Remote/Freelance}
+\begin{itemize}
+  \item Delivered end-to-end solutions for startups, specializing in scalable Node.js applications and optimizing performance for rapid growth.  
+  \item Focused on clean architecture, system maintainability, and quick deployment cycles to support client objectives.  
+  \item Guided teams to enhance system stability and reduce resource usage, ensuring efficient scaling.
+\end{itemize}
+
+\subsection*{Software Engineer} \hfill \textit{June 2023 -- Oct 2024}  
+\textbf{Aava Technology,} Lalitpur, Nepal
+\begin{itemize}
+  \item Led backend optimization efforts to improve performance and ensure system scalability.  
+  \item Collaborated with teams to enhance cloud-based platform capabilities, utilizing \textbf{DevOps} principles and cloud-native technologies.  
+  \item Delivered customer-focused, revenue-driving features while ensuring high availability and minimal downtime.
+\end{itemize}
+
+\subsection*{Frontend Developer} \hfill \textit{Jan 2023 -- June 2023}  
+\textbf{Aava Technology,} Lalitpur, Nepal
+\begin{itemize}
+  \item Developed user-centric, responsive frontend features with modern frameworks like \textbf{React, Next.js, Redux,} and \textbf{Zustand}.  
+  \item Worked closely with backend teams to ensure seamless integration of features for consistent functionality.  
+  \item Focused on creating an optimal user experience by implementing performance enhancements across the frontend.
+\end{itemize}
+
+\subsection*{Data Science Fellow} \hfill \textit{July. 2021 -- Dec. 2021}  
+\textbf{GivingBackAI,} New York, Chicago
+\begin{itemize}
+  \item Applied \textbf{machine learning} techniques in Python to develop AI-driven tools, optimizing project outcomes.  
+  \item Contributed to open-source AI projects, enhancing community-driven tools for global impact.  
+  \item Analyzed large datasets using \textbf{TensorFlow}, producing insights that fueled impactful initiatives in Nepal.
+\end{itemize}
+
+%-----------PROJECTS-----------------
+\section*{Projects}
+
+\subsection*{Open-Source Projects}
+\begin{itemize}
+  \item \textbf{Transaction Verification System:} Developed an online transaction verification system for fraud prevention using \textbf{React, Django, FastAPI}, and machine learning.  
+  \item \textbf{Nepali Sentiment Analysis NLP:} Created a sentiment analysis tool specifically for Nepali language processing.  
+  \item \textbf{Twitter Insights:} Led the development of a platform for localized Twitter analytics and sentiment analysis using \textbf{Next.js}.
+\end{itemize}
+
+\subsection*{Non-Open-Source Projects}
+\begin{itemize}
+  \item \textbf{Anydone:} Contributed to the development of a task management and communication platform.  
+  \item \textbf{EasyUnsub App:} Designed and implemented features for an iOS/Android app.  
+  \item \textbf{Investiaa:} Developed a startup platform for investment and buy-sell activities.  
+  \item \textbf{Mazzakotrip:} Built backend for a tour and travel website using SOAP architecture and GDS.  
+  \item \textbf{Pushpan Foundation Website:} Developed a charity-focused website.  
+  \item \textit{And many more...}
+\end{itemize}
+
+%-----------EDUCATION-----------------
+\section*{Education}
+\textbf{Nepal College of Information Technology,} Lalitpur, Nepal \hfill \textit{Nov. 2019 -- Aug. 2023}  
+Bachelors in Software Engineering  
+
+% End document
+\end{document}
