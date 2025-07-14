@@ -1,0 +1,393 @@
+{
+	"info": {
+		"_postman_id": "4a279db0-6a8a-4c8c-9d8f-3546751651a9",
+		"name": "Api Dev",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21753373",
+		"_collection_link": "https://martian-resonance-52158.postman.co/workspace/tvis~96a9d86c-05d6-4e85-abaf-2b9cd836ed89/collection/21753373-4a279db0-6a8a-4c8c-9d8f-3546751651a9?action=share&source=collection_link&creator=21753373"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "geeta@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "geeta",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "bhatta",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "23",
+							"type": "text"
+						},
+						{
+							"key": "faculty",
+							"value": "software",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/sachit/Pictures/images.jpeg"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/forms/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"forms",
+						"register",
+						""
+					]
+				},
+
+			},
+			"response": [
+				{
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [],
+                    "cookie":[],
+					"body": "{\n    \"email\": \"ritaa@gmail.com\",\n    \"first_name\": \"rita\",\n    \"last_name\": \"bhatta\",\n    \"faculty\": \"software\",\n    \"age\": 23,\n    \"file\": \"http://127.0.0.1:8000/uploads/images_UQfAG7N.jpeg\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"ravi@gmail.com\",\n    \"password\":\"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/forms/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"forms",
+						"login",
+						""
+					]
+				},
+			},
+			"response": [
+				{
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [],
+                    "cookie":[],
+					"body": "{\n    \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc1MjU0NDkxOSwiaWF0IjoxNzUyNDU4NTE5LCJqdGkiOiIxZmNmZThiMmNkZjU0ZmRlYjM3ODcxYmQ4MmI2YWNlZCIsInVzZXJfaWQiOjN9.GBYWYRRiai-ac8mfzDY9l4gxv7vLg-yPDnzWznNNCE4\",\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUyNTQ0OTE5LCJpYXQiOjE3NTI0NTg1MTksImp0aSI6ImI5ODQ4YzcwYjY3MzRmMGE5YTg1ZTc0MDNmZDAwMjQzIiwidXNlcl9pZCI6M30.nxdwHH3xkUxFYi1RnBGbiPsWX5UJL8ry6sMK2tafD_0\"\n}"
+				}
+			]
+		},
+		{
+			"name": "SIngle User Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUyNDgzNjE2LCJpYXQiOjE3NTIzOTcyMTYsImp0aSI6ImQ1NTcyZTE1YmY4NjQyMTc4OTViYTcyYzVlZDYwYWIxIiwidXNlcl9pZCI6M30.8fPDO55m74Dhou084bUVVwV4_9Od1zQiFk7HFT2AaYE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/forms/profile/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"forms",
+						"profile",
+						""
+					]
+				},
+			},
+			"response": [
+				{
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date"
+						}
+					],
+					"body": "{\n    \"users\": {\n        \"student_id\": \"a5fb13ba-0258-4d77-b555-16502fbecb6b\",\n        \"email\": \"ravi@gmail.com\",\n        \"first_name\": \"ravi\",\n        \"last_name\": \"bhatta\",\n        \"faculty\": \"software\",\n        \"age\": 20,\n        \"file\": null\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "All Users",
+			"request": {
+                "auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUyNDgzNjE2LCJpYXQiOjE3NTIzOTcyMTYsImp0aSI6ImQ1NTcyZTE1YmY4NjQyMTc4OTViYTcyYzVlZDYwYWIxIiwidXNlcl9pZCI6M30.8fPDO55m74Dhou084bUVVwV4_9Od1zQiFk7HFT2AaYE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+			},
+			"response": [
+				{
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date"
+						}
+					],
+					"body": "{\n    \"users\": [\n        {\n            \"student_id\": \"9bc1c8fc-7a5c-4fc9-8ba3-64f4a6b95e66\",\n            \"email\": \"ram@gmail.com\",\n            \"first_name\": \"ram\",\n            \"last_name\": \"bhatta\",\n            \"faculty\": \"software\",\n            \"age\": 20,\n            \"file\": null\n        },\n        {\n            \"student_id\": \"a5fb13ba-0258-4d77-b555-16502fbecb6b\",\n            \"email\": \"ravi@gmail.com\",\n            \"first_name\": \"ravi\",\n            \"last_name\": \"bhatta\",\n            \"faculty\": \"software\",\n            \"age\": 20,\n            \"file\": null\n        },\n        {\n            \"student_id\": \"cc1ab872-1d87-435f-8844-80b88ff62403\",\n            \"email\": \"hari@gmail.com\",\n            \"first_name\": \"hari\",\n            \"last_name\": \"bhatta\",\n            \"faculty\": \"software\",\n            \"age\": 20,\n            \"file\": null\n        },\n        {\n            \"student_id\": \"ffaa624f-7c40-448b-b1e4-7836366fa4f7\",\n            \"email\": \"shyam@gmail.com\",\n            \"first_name\": \"shyam\",\n            \"last_name\": \"bhatta\",\n            \"faculty\": \"software\",\n            \"age\": 20,\n            \"file\": \"/uploads/message.txt\"\n        },\n        {\n            \"student_id\": \"0d6d2511-7301-470c-ba38-d7403a7668a1\",\n            \"email\": \"sonam@gmail.com\",\n            \"first_name\": \"sonam\",\n            \"last_name\": \"bhatta\",\n            \"faculty\": \"software\",\n            \"age\": 20,\n            \"file\": \"/uploads/images.jpeg\"\n        },\n        {\n            \"student_id\": \"eef5f141-d245-49d8-aa6f-36783e4518ea\",\n            \"email\": \"geeta@gmail.com\",\n            \"first_name\": \"geeta\",\n            \"last_name\": \"bhatta\",\n            \"faculty\": \"software\",\n            \"age\": 23,\n            \"file\": null\n        },\n        {\n            \"student_id\": \"8d570627-dc73-46b8-a1ff-62da9486427b\",\n            \"email\": \"ritaa@gmail.com\",\n            \"first_name\": \"rita\",\n            \"last_name\": \"bhatta\",\n            \"faculty\": \"software\",\n            \"age\": 23,\n            \"file\": \"/uploads/images_UQfAG7N.jpeg\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "wheel-specifications",
+			"request": {
+                "auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUyNDgzNjE2LCJpYXQiOjE3NTIzOTcyMTYsImp0aSI6ImQ1NTcyZTE1YmY4NjQyMTc4OTViYTcyYzVlZDYwYWIxIiwidXNlcl9pZCI6M30.8fPDO55m74Dhou084bUVVwV4_9Od1zQiFk7HFT2AaYE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				
+			},
+			"response": [
+				{
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date"
+						}
+					],
+					"body": "[\n    {\n        \"formNumber\": \"WHEEL-2025-005\",\n        \"submittedBy\": \"user_id_123\",\n        \"submittedDate\": \"2025-07-03\",\n        \"fields\": {\n            \"id\": 4,\n            \"treadDiameterNew\": \"915 (900-1000)\",\n            \"lastShopIssueSize\": \"837 (800-900)\",\n            \"condemningDia\": \"825 (800-900)\",\n            \"wheelGauge\": \"1600 (+2,-1)\",\n            \"variationSameAxle\": \"0.5\",\n            \"variationSameBogie\": \"5\",\n            \"variationSameCoach\": \"13\",\n            \"wheelProfile\": \"29.4 Flange Thickness\",\n            \"intermediateWWP\": \"20 TO 28\",\n            \"bearingSeatDiameter\": \"130.043 TO 130.068\",\n            \"rollerBearingOuterDia\": \"280 (+0.0/-0.035)\",\n            \"rollerBearingBoreDia\": \"130 (+0.0/-0.025)\",\n            \"rollerBearingWidth\": \"93 (+0/-0.250)\",\n            \"axleBoxHousingBoreDia\": \"280 (+0.030/+0.052)\",\n            \"wheelDiscWidth\": \"127 (+4/-0)\"\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "wheel-specification(post)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUyNDgzNjE2LCJpYXQiOjE3NTIzOTcyMTYsImp0aSI6ImQ1NTcyZTE1YmY4NjQyMTc4OTViYTcyYzVlZDYwYWIxIiwidXNlcl9pZCI6M30.8fPDO55m74Dhou084bUVVwV4_9Od1zQiFk7HFT2AaYE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \"formNumber\": \"WHEEL-2025-006\",  \"submittedBy\": \"user_id_123\",  \"submittedDate\": \"2025-07-03\",  \"fields\": {    \"treadDiameterNew\": \"915 (900-1000)\",    \"lastShopIssueSize\": \"837 (800-900)\",    \"condemningDia\": \"825 (800-900)\",    \"wheelGauge\": \"1600 (+2,-1)\",    \"variationSameAxle\": \"0.5\",    \"variationSameBogie\": \"5\",    \"variationSameCoach\": \"13\",    \"wheelProfile\": \"29.4 Flange Thickness\",    \"intermediateWWP\": \"20 TO 28\",    \"bearingSeatDiameter\": \"130.043 TO 130.068\",    \"rollerBearingOuterDia\": \"280 (+0.0/-0.035)\",    \"rollerBearingBoreDia\": \"130 (+0.0/-0.025)\",    \"rollerBearingWidth\": \"93 (+0/-0.250)\",    \"axleBoxHousingBoreDia\": \"280 (+0.030/+0.052)\",    \"wheelDiscWidth\": \"127 (+4/-0)\"  } }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/forms/wheel-specifications/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"forms",
+						"wheel-specifications",
+						""
+					]
+				},
+				
+			},
+			"response": [
+				{
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date"
+						}
+					],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Wheel specification submitted successfully.\",\n    \"data\": {\n        \"formNumber\": \"WHEEL-2025-007\",\n        \"submittedBy\": \"user_id_123\",\n        \"submittedDate\": \"2025-07-03\"\n    },\n    \"status\": \"Saved\"\n}"
+				}
+			]
+		},
+		{
+			"name": "bogie-checksheet",
+			"request": {
+                "auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUyNDgzNjE2LCJpYXQiOjE3NTIzOTcyMTYsImp0aSI6ImQ1NTcyZTE1YmY4NjQyMTc4OTViYTcyYzVlZDYwYWIxIiwidXNlcl9pZCI6M30.8fPDO55m74Dhou084bUVVwV4_9Od1zQiFk7HFT2AaYE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+			},
+			"response": [
+				{
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date"
+						}
+					],
+					"body": "[\n    {\n        \"formNumber\": \"BOGIE-2025-001\",\n        \"inspectionBy\": \"user_id_456\",\n        \"inspectionDate\": \"2025-07-03\",\n        \"bogieDetails\": {\n            \"id\": 1,\n            \"bogieNo\": \"BG1234\",\n            \"makerYearBuilt\": \"RDSO/2018\",\n            \"incomingDivAndDate\": \"NR / 2025-06-25\",\n            \"deficitComponents\": \"None\",\n            \"dateOfIOH\": \"2025-07-01\"\n        },\n        \"bogieChecksheet\": {\n            \"id\": 1,\n            \"bogieFrameCondition\": \"Good\",\n            \"bolster\": \"Good\",\n            \"bolsterSuspensionBracket\": \"Cracked\",\n            \"lowerSpringSeat\": \"Good\",\n            \"axleGuide\": \"Worn\"\n        },\n        \"bmbcChecksheet\": {\n            \"id\": 1,\n            \"cylinderBody\": \"WORN OUT\",\n            \"pistonTrunnion\": \"GOOD\",\n            \"adjustingTube\": \"DAMAGED\",\n            \"plungerSpring\": \"GOOD\"\n        }\n    },\n    {\n        \"formNumber\": \"BOGIE-2025-002\",\n        \"inspectionBy\": \"user_id_456\",\n        \"inspectionDate\": \"2025-07-03\",\n        \"bogieDetails\": {\n            \"id\": 2,\n            \"bogieNo\": \"BG1234\",\n            \"makerYearBuilt\": \"RDSO/2018\",\n            \"incomingDivAndDate\": \"NR / 2025-06-25\",\n            \"deficitComponents\": \"None\",\n            \"dateOfIOH\": \"2025-07-01\"\n        },\n        \"bogieChecksheet\": {\n            \"id\": 2,\n            \"bogieFrameCondition\": \"Good\",\n            \"bolster\": \"Good\",\n            \"bolsterSuspensionBracket\": \"Cracked\",\n            \"lowerSpringSeat\": \"Good\",\n            \"axleGuide\": \"Worn\"\n        },\n        \"bmbcChecksheet\": {\n            \"id\": 2,\n            \"cylinderBody\": \"WORN OUT\",\n            \"pistonTrunnion\": \"GOOD\",\n            \"adjustingTube\": \"DAMAGED\",\n            \"plungerSpring\": \"GOOD\"\n        }\n    },\n    {\n        \"formNumber\": \"BOGIE-2025-003\",\n        \"inspectionBy\": \"user_id_456\",\n        \"inspectionDate\": \"2025-07-03\",\n        \"bogieDetails\": {\n            \"id\": 3,\n            \"bogieNo\": \"BG1234\",\n            \"makerYearBuilt\": \"RDSO/2018\",\n            \"incomingDivAndDate\": \"NR / 2025-06-25\",\n            \"deficitComponents\": \"None\",\n            \"dateOfIOH\": \"2025-07-01\"\n        },\n        \"bogieChecksheet\": {\n            \"id\": 3,\n            \"bogieFrameCondition\": \"Good\",\n            \"bolster\": \"Good\",\n            \"bolsterSuspensionBracket\": \"Cracked\",\n            \"lowerSpringSeat\": \"Good\",\n            \"axleGuide\": \"Worn\"\n        },\n        \"bmbcChecksheet\": {\n            \"id\": 3,\n            \"cylinderBody\": \"WORN OUT\",\n            \"pistonTrunnion\": \"GOOD\",\n            \"adjustingTube\": \"DAMAGED\",\n            \"plungerSpring\": \"GOOD\"\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "bogie-checksheet(post)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUyNDgzNjE2LCJpYXQiOjE3NTIzOTcyMTYsImp0aSI6ImQ1NTcyZTE1YmY4NjQyMTc4OTViYTcyYzVlZDYwYWIxIiwidXNlcl9pZCI6M30.8fPDO55m74Dhou084bUVVwV4_9Od1zQiFk7HFT2AaYE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \"formNumber\": \"BOGIE-2025-003\",  \"inspectionBy\": \"user_id_456\",  \"inspectionDate\": \"2025-07-03\",  \"bogieDetails\": {    \"bogieNo\": \"BG1234\",    \"makerYearBuilt\": \"RDSO/2018\",    \"incomingDivAndDate\": \"NR / 2025-06-25\",    \"deficitComponents\": \"None\",    \"dateOfIOH\": \"2025-07-01\"  },  \"bogieChecksheet\": {    \"bogieFrameCondition\": \"Good\",    \"bolster\": \"Good\",    \"bolsterSuspensionBracket\": \"Cracked\",    \"lowerSpringSeat\": \"Good\",    \"axleGuide\": \"Worn\"  },  \"bmbcChecksheet\": {    \"cylinderBody\": \"WORN OUT\",    \"pistonTrunnion\": \"GOOD\",    \"adjustingTube\": \"DAMAGED\",    \"plungerSpring\": \"GOOD\"  } }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/forms/bogie-checksheet/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"forms",
+						"bogie-checksheet",
+						""
+					]
+				},
+				
+			},
+			"response": [
+				{
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date"
+						}
+					],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Bogie checksheet submitted successfully.\",\n    \"data\": {\n        \"formNumber\": \"BOGIE-2025-004\",\n        \"inspectionBy\": \"user_id_456\",\n        \"inspectionDate\": \"2025-07-03\"\n    },\n    \"status\": \"Saved\"\n}"
+				}
+			]
+		}
+	]
+}
