@@ -149,3 +149,37 @@ API-dev/
 │   ├── urls.py
 │   └── ...
 ```
+## Run Project using Docker
+
+### Instructions
+
+1. **Update Database Host**:
+   - Open `settings.py` in the project directory.
+   - In the database configuration, change `HOST` to `'db'`:
+     ```python
+     DATABASES = {
+         'default': {
+             'ENGINE': 'django.db.backends.postgresql',
+             'NAME': 'your_database_name',
+             'USER': 'your_database_user',
+             'PASSWORD': 'your_database_password',
+             'HOST': 'db',
+             'PORT': '5432',
+         }
+     }
+     ```
+   - Save the file.
+
+2. **Build and Run Containers**:
+   - From the project’s root directory (where `docker-compose.yml` is located), run:
+     ```bash
+     docker compose up --build
+     ```
+   - Access the application at `http://localhost:8000`
+
+3. **Stop Containers**:
+   - To stop and remove containers, run:
+     ```bash
+     docker compose down
+     ```
+
