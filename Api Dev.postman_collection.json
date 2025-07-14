@@ -71,7 +71,7 @@
 						"register",
 						""
 					]
-				},
+				}
 
 			},
 			"response": [
@@ -118,7 +118,7 @@
 						"login",
 						""
 					]
-				},
+				}
 			},
 			"response": [
 				{
@@ -127,7 +127,7 @@
 					"_postman_previewlanguage": "json",
 					"header": [],
                     "cookie":[],
-					"body": "{\n    \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc1MjU0NDkxOSwiaWF0IjoxNzUyNDU4NTE5LCJqdGkiOiIxZmNmZThiMmNkZjU0ZmRlYjM3ODcxYmQ4MmI2YWNlZCIsInVzZXJfaWQiOjN9.GBYWYRRiai-ac8mfzDY9l4gxv7vLg-yPDnzWznNNCE4\",\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUyNTQ0OTE5LCJpYXQiOjE3NTI0NTg1MTksImp0aSI6ImI5ODQ4YzcwYjY3MzRmMGE5YTg1ZTc0MDNmZDAwMjQzIiwidXNlcl9pZCI6M30.nxdwHH3xkUxFYi1RnBGbiPsWX5UJL8ry6sMK2tafD_0\"\n}"
+					"body": "{\n    \"refresh_token\": \"<token>\",\n    \"access_token\": \"<token>\"\n}"
 				}
 			]
 		},
@@ -139,7 +139,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUyNDgzNjE2LCJpYXQiOjE3NTIzOTcyMTYsImp0aSI6ImQ1NTcyZTE1YmY4NjQyMTc4OTViYTcyYzVlZDYwYWIxIiwidXNlcl9pZCI6M30.8fPDO55m74Dhou084bUVVwV4_9Od1zQiFk7HFT2AaYE",
+							"value": "<token>",
 							"type": "string"
 						}
 					]
@@ -162,7 +162,7 @@
 						"profile",
 						""
 					]
-				},
+				}
 			},
 			"response": [
 				{
@@ -187,13 +187,13 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUyNDgzNjE2LCJpYXQiOjE3NTIzOTcyMTYsImp0aSI6ImQ1NTcyZTE1YmY4NjQyMTc4OTViYTcyYzVlZDYwYWIxIiwidXNlcl9pZCI6M30.8fPDO55m74Dhou084bUVVwV4_9Od1zQiFk7HFT2AaYE",
+							"value": "<token>",
 							"type": "string"
 						}
 					]
 				},
 				"method": "GET",
-				"header": [],
+				"header": []
 			},
 			"response": [
 				{
@@ -218,13 +218,13 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUyNDgzNjE2LCJpYXQiOjE3NTIzOTcyMTYsImp0aSI6ImQ1NTcyZTE1YmY4NjQyMTc4OTViYTcyYzVlZDYwYWIxIiwidXNlcl9pZCI6M30.8fPDO55m74Dhou084bUVVwV4_9Od1zQiFk7HFT2AaYE",
+							"value": "<token>",
 							"type": "string"
 						}
 					]
 				},
 				"method": "GET",
-				"header": [],
+				"header": []
 				
 			},
 			"response": [
@@ -250,7 +250,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUyNDgzNjE2LCJpYXQiOjE3NTIzOTcyMTYsImp0aSI6ImQ1NTcyZTE1YmY4NjQyMTc4OTViYTcyYzVlZDYwYWIxIiwidXNlcl9pZCI6M30.8fPDO55m74Dhou084bUVVwV4_9Od1zQiFk7HFT2AaYE",
+							"value": "<token>",
 							"type": "string"
 						}
 					]
@@ -282,7 +282,7 @@
 						"wheel-specifications",
 						""
 					]
-				},
+				}
 				
 			},
 			"response": [
@@ -308,13 +308,13 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUyNDgzNjE2LCJpYXQiOjE3NTIzOTcyMTYsImp0aSI6ImQ1NTcyZTE1YmY4NjQyMTc4OTViYTcyYzVlZDYwYWIxIiwidXNlcl9pZCI6M30.8fPDO55m74Dhou084bUVVwV4_9Od1zQiFk7HFT2AaYE",
+							"value": "<token>",
 							"type": "string"
 						}
 					]
 				},
 				"method": "GET",
-				"header": [],
+				"header": []
 			},
 			"response": [
 				{
@@ -339,7 +339,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUyNDgzNjE2LCJpYXQiOjE3NTIzOTcyMTYsImp0aSI6ImQ1NTcyZTE1YmY4NjQyMTc4OTViYTcyYzVlZDYwYWIxIiwidXNlcl9pZCI6M30.8fPDO55m74Dhou084bUVVwV4_9Od1zQiFk7HFT2AaYE",
+							"value": "<token>",
 							"type": "string"
 						}
 					]
@@ -371,7 +371,7 @@
 						"bogie-checksheet",
 						""
 					]
-				},
+				}
 				
 			},
 			"response": [
